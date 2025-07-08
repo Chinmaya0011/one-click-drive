@@ -10,9 +10,9 @@ export default function LoginPage() {
     const result = await signIn(email, password);
     
     if (result) {
-      redirect('/listings');
+      redirect('/dashboard/listings');
     } else {
-      redirect('/login?error=Invalid credentials');
+      redirect('/auth/login?error=Invalid credentials');
     }
   }
 
